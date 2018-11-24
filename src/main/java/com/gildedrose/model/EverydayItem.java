@@ -18,7 +18,6 @@ public class EverydayItem extends Item {
 	
 	@Override
 	public void updateQuality() {
-		
 	}
 
 }
