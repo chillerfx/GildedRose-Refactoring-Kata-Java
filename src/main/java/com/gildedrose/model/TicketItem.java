@@ -21,9 +21,10 @@ public class TicketItem extends Item {
 
 	@Override
 	public void updateQuality() {
+		int maxQuality = 50;
 		if (this.sellIn <= 0 && this.quality >= 0) {
 			this.quality = 0;
-		} else if (this.quality <= 50) {
+		} else if (this.quality <= maxQuality) {
 			if (this.sellIn <= 10 && this.sellIn > 5) {
 				this.sellIn--;
 				this.quality = this.quality + 2;
@@ -31,7 +32,9 @@ public class TicketItem extends Item {
 				this.sellIn--;
 				this.quality = this.quality + 3;
 			}
-
+			if (this.quality >= maxQuality) {
+				this.quality =  maxQuality;
+			}
 		}
 	}
 }
