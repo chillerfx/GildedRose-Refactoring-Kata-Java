@@ -7,7 +7,7 @@ import com.gildedrose.model.LegendaryItem;
 import com.gildedrose.model.TicketItem;
 
 public class TexttestFixture {
-    public static void main(String[] args) {
+    public static void textTestFixture(String[] args) {
         System.out.println("OMGHAI!");
 
         Item[] items = new Item[] {
