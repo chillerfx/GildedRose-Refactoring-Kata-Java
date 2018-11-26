@@ -4,16 +4,10 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.PositiveOrZero;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 @Entity
 public class EverydayItem extends Item {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	Integer id;
-
+	
 	public EverydayItem(String name, @PositiveOrZero(message = "Sell in Should be a positive number") int sellIn,
 			@Min(value = 0, message = "Everyday item quality should not be less than 0") @Max(value = 50, message = "Everyday item quality should not be more than 50") int quality) {
 		super(name, sellIn, quality);

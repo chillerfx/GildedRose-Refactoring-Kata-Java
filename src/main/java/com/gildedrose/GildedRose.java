@@ -2,16 +2,17 @@ package com.gildedrose;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.gildedrose.model.Item;
 
 @SpringBootApplication
+@ComponentScan(basePackages="com.gildedrose.controller")
 class GildedRose {
 
-	public void main(String[] args) {
-	   SpringApplicationBuilder application = new SpringApplicationBuilder(GildedRose.class);
-	   application.run(args);
-    }
+	public static void main(String[] args) {
+		new SpringApplicationBuilder().sources(GildedRose.class).profiles("dev").run();
+	}
 
 	Item[] items;
 

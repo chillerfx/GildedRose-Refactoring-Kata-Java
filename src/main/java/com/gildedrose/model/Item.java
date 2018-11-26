@@ -1,6 +1,15 @@
 package com.gildedrose.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public class Item {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public Integer id;
 
 	public String name;
 
