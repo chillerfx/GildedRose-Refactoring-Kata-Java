@@ -7,7 +7,7 @@ package com.gildedrose.controller;
 
 //import com.gildedrose.GildedRose;
 
-//@RestController()
+@RestController()
 public class GildedRoseController {
 //	@Autowired 
 //	ItemRepo itemRepo;
